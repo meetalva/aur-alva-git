@@ -1,6 +1,5 @@
 services:
   - docker
 script:
-  - docker-compose run --user=2000:2000 --rm makepkg makepkg -f
-  - docker-compose run --rm makepkg pacman -U --noconfirm *.tar.xz
-
+  - docker-compose run --user=2000:2000 --rm makepkg sh -c "pacman -Sy && makepkg -sf"
+  - docker-compose run --rm makepkg pacman -SU --noconfirm *.tar.xz
