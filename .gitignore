@@ -2,3 +2,9 @@ alva-git
 pkg
 src
 *.xz
+.cache/
+.config/
+.electron/
+.node-gyp/
+.npm/
+
