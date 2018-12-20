@@ -6,5 +6,3 @@ services:
     volumes:
       - '.:/home/builder/'
     command: sh -c "makepkg --printsrcinfo > .SRCINFO && sudo pacman -Sy && makepkg -sfi --noconfirm"
-
-
