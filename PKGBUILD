@@ -26,7 +26,7 @@ md5sums=(SKIP)
 pkgver() {
   cd "$srcdir/$pkgname"
 # Use latest tag
-  git tag | tail -n 1 | tr '-' '.'
+  git tag | sort --version-sort | tail -n 1 | tr '-' '.'
 }
 
 build() {
