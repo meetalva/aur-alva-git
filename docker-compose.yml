@@ -2,7 +2,7 @@ version: '3'
 
 services:
   makepkg:
-    image: imrehg/archlinux-makepkg
+    build: .
     volumes:
       - '.:/home/builder/'
     command: sh -c "makepkg --printsrcinfo > .SRCINFO && sudo pacman -Sy && makepkg -sfi --noconfirm"
